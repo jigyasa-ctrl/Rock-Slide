@@ -1,0 +1,26 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-image: url("http://www.levistrauss.com/wp-content/uploads/2014/04/shutterstock_102575675.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#story {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-top: 10%;
+  background-image: url("https://jacobsmedia.com/wp-content/uploads/2016/05/rock-n-roll.jpg");
+  background-position: center;
+  background-size: cover;
+  outline: none;
+  border-style: none;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 100%;
+}
