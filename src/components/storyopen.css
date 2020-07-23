@@ -1,51 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
-audio {
-  position: absolute;
-  width: 20%;
-  right: 5%;
-}
-audio:focus {
-  outline: none;
-}
-audio::-webkit-media-controls-play-button {
-  background-color: white;
-  border-radius: 70%;
-}
-audio::-webkit-media-controls-volume-button {
-  display: none;
-}
-audio::-webkit-media-controls {
-  background-color: transparent;
-}
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
 
-audio::-webkit-media-controls-enclosure {
-  background-color: transparent;
-}
-audio::-webkit-media-controls-timeline-container,
-input[type="range" i]::-webkit-media-slider-container,
-input[type="range" i]::-webkit-media-slider-container > div,
-input[type="range" i]::-webkit-media-slider-thumb,
-audio::-webkit-media-controls-fullscreen-button,
-audio:-webkit-full-page-media::-webkit-media-controls-panel {
-  display: none;
-}
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-mute-button,
-audio::-webkit-media-controls-timeline,
-input::-webkit-media-slider-container,
-audio::-webkit-media-controls-fullscreen-button,
-audio::-webkit-media-controls-toggle-closed-captions-button,
-audio::-webkit-media-controls-volume-slider,
-audio::-webkit-media-controls-timeline,
-audio::-webkit-media-controls-toggle-closed-captions-button,
-audio::-webkit-media-controls-volume-slider,
-audio::-webkit-media-controls-overlay-enclosure,
-audio::-webkit-media-controls-current-time-display {
-  display: none;
-}
-audio::-webkit-media-controls-panel {
-  background-color: transparent;
-}
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -53,8 +7,12 @@ audio::-webkit-media-controls-panel {
   animation-duration: 1.5s;
 }
 @keyframes fade {
-  from {height: 400px} 
-  to {height: 600px}
+  from {
+    height: 400px;
+  }
+  to {
+    height: 600px;
+  }
 }
 .story-container {
   position: relative;
@@ -73,39 +31,81 @@ audio::-webkit-media-controls-panel {
   margin: auto;
   margin-top: 20px;
   z-index: 3;
-  background: white;
-  color: blue;
- 
-  
+  background: white; 
 }
 
-
 @media screen and (max-width: 700px) {
+  .responsive1,
+  .responsive2 {
+    position: absolute;
+    height: 100vh;
+    width: 30%;
+    z-index: 5;
+    display: hidden;
+  }
+  .fa-chevron-circle-left,
+  .fa-chevron-circle-right {
+    display: none;
+  }
+  #pause {
+    display: none;
+  }
+  #pagination {
+top:50%;
+  }
+  .responsive2 {
+    right: 0%;
+  }
+
+  .story {
+    width: 100%;
+  }
   .story-side1,
   .story-side2 {
     display: none;
   }
-  audio {
-    right: 35%;
-    z-index: 5;
-    top: 5%;
-  }
+}
+#pause {
+  position: absolute;
+  color: white;
+  height: 50px;
+  width: 100px;
+  z-index: 10;
+  right:5%;
+  top:7%;
+}
+.active{
+  background-color:white;
+}
+#pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction:row;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 10;
+ 
+}
+ .page{
+  height:5px;
+width:90%;
+margin-left:5px;
+
 }
 
-.story p {
-  font-family:'Poppins', cursive;
+.text {
+  font-family: "Poppins", cursive;
   position: absolute;
   text-align: center;
-  font-size:35px;
+  font-size: 35px;
   color: white;
   text-align: center;
   transition: 1s ease-in;
-  background:rgb(0,0,0,0.4);
-  
+  background: rgb(0, 0, 0, 0.4);
 }
-.story:onClick{
-height:800px;
-}
+
 .story-side1 img,
 .story-side2 img,
 .story img {
@@ -122,7 +122,7 @@ height:800px;
   margin-right: 20px;
   margin-top: 105px;
   opacity: 0.2;
-  color: blue;
+  
 }
 .story-side2 {
   position: relative;
@@ -132,7 +132,6 @@ height:800px;
   margin-right: 150px;
   margin-top: 105px;
   background: black;
-  color: blue;
   opacity: 0.2;
   z-index: 0;
 }
@@ -141,12 +140,14 @@ height:800px;
 .story-side1:hover {
   opacity: 0.5;
 }
+
 .fa-chevron-circle-left {
   position: absolute;
   color: white;
   font-size: 30px;
   top: 50%;
   left: 5%;
+  z-index: 5;
 }
 .fa-chevron-circle-right {
   right: 5%;
@@ -154,6 +155,7 @@ height:800px;
   color: white;
   font-size: 30px;
   top: 50%;
+  z-index: 5;
 }
 .fa-times-circle {
   position: absolute;
